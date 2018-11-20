@@ -13,7 +13,24 @@
 		32671E3B21A3C9F7003514D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32671E3A21A3C9F7003514D8 /* Assets.xcassets */; };
 		32671E3E21A3C9F7003514D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32671E3C21A3C9F7003514D8 /* LaunchScreen.storyboard */; };
 		32671E4121A3C9F7003514D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32671E4021A3C9F7003514D8 /* main.m */; };
+		32671E5421A3D437003514D8 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 32671E5321A3D437003514D8 /* test.c */; };
+		32671E7721A3F611003514D8 /* libmylib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32671E7621A3F611003514D8 /* libmylib.dylib */; };
+		32671E7921A3F6A3003514D8 /* libmylib.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 32671E7821A3F6A3003514D8 /* libmylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32671E7A21A3F6A3003514D8 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				32671E7921A3F6A3003514D8 /* libmylib.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		32671E2E21A3C9F5003514D8 /* DylibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DylibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +43,10 @@
 		32671E3D21A3C9F7003514D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32671E3F21A3C9F7003514D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32671E4021A3C9F7003514D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32671E5221A3D437003514D8 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		32671E5321A3D437003514D8 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		32671E7621A3F611003514D8 /* libmylib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmylib.dylib; sourceTree = "<group>"; };
+		32671E7821A3F6A3003514D8 /* libmylib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmylib.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32671E7721A3F611003514D8 /* libmylib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +64,10 @@
 		32671E2521A3C9F5003514D8 = {
 			isa = PBXGroup;
 			children = (
+				32671E7821A3F6A3003514D8 /* libmylib.dylib */,
 				32671E3021A3C9F5003514D8 /* DylibSample */,
 				32671E2F21A3C9F5003514D8 /* Products */,
+				32671E4721A3CC2C003514D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +91,18 @@
 				32671E3C21A3C9F7003514D8 /* LaunchScreen.storyboard */,
 				32671E3F21A3C9F7003514D8 /* Info.plist */,
 				32671E4021A3C9F7003514D8 /* main.m */,
+				32671E5221A3D437003514D8 /* test.h */,
+				32671E5321A3D437003514D8 /* test.c */,
 			);
 			path = DylibSample;
+			sourceTree = "<group>";
+		};
+		32671E4721A3CC2C003514D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32671E7621A3F611003514D8 /* libmylib.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +115,7 @@
 				32671E2A21A3C9F5003514D8 /* Sources */,
 				32671E2B21A3C9F5003514D8 /* Frameworks */,
 				32671E2C21A3C9F5003514D8 /* Resources */,
+				32671E7A21A3F6A3003514D8 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -144,6 +179,7 @@
 				32671E3621A3C9F5003514D8 /* ViewController.m in Sources */,
 				32671E4121A3C9F7003514D8 /* main.m in Sources */,
 				32671E3321A3C9F5003514D8 /* AppDelegate.m in Sources */,
+				32671E5421A3D437003514D8 /* test.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +322,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCXDQBZA26;
+				EXECUTABLE_PREFIX = "";
 				INFOPLIST_FILE = DylibSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DylibSample",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonbc.DylibSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,10 +346,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCXDQBZA26;
+				EXECUTABLE_PREFIX = "";
 				INFOPLIST_FILE = DylibSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DylibSample",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonbc.DylibSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
